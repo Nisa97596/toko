@@ -1,0 +1,414 @@
+:root {
+    --black: var(--black) --pink:var(--pink);
+
+}
+
+* {
+    font-family: 'Inter', 'Inknut Antiqua';
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+}
+
+body {
+    background-color: #FFD0D0;
+    font-family: 'Inter', 'Inknut Antiqua';
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: verdana, geneva, tahoma, sans-serif;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: .2s linear;
+    overflow-x: hidden;
+    min-height: 800px;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+
+
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.4rem 7%;
+    background-color: pink;
+    border-bottom: 1px rgb(0, 0, 0);
+    position: fixed;
+    flex-shrink: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+}
+
+.navbar-logo {
+    color: black;
+    font-size: 32px;
+    font-family: "Inter";
+    font-weight: 700;
+    word-wrap: break-word
+}
+
+.navbar .navbar-nav a {
+    color: black;
+    display: inline-block;
+    margin: 0 1rem;
+    font-size: 20px;
+    font-family: Inter;
+    font-weight: 500;
+    word-wrap: break-word
+}
+
+/* untk tulisan animasi klik */
+.navbar .navbar-nav a:hover {
+    color: #FFFAD7;
+}
+
+.navbar .navbar-nav a::after {
+    content: '';
+    display: block;
+    padding-bottom: 0.5rem;
+    border-bottom: 0.30rem solid #1A1616;
+    transform: scaleX(0);
+    transition: 0.2s linear;
+}
+
+.navbar .navbar-nav a:hover::after {
+    transform: scaleX(0.5);
+}
+
+.navbar .navbar-extra {
+    color: #1A1616;
+    margin: 0 1rem;
+}
+
+.navbar .navbar-extra :hover {
+    color: #FFFAD7;
+
+}
+
+/* untk icon menyesuikan */
+#menu {
+    display: none;
+    position: relative;
+}
+
+/* Media Queries */
+
+/*laptop */
+@media (max-width: 1366px) {
+    html {
+        font-size: 75%;
+    }
+}
+
+/*tablet */
+@media (max-width: 758px) {
+    html {
+        font-size: 62.5%;
+    }
+
+    #menu {
+        display: inline-block;
+    }
+
+    .navbar-nav {
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        flex-direction: column;
+        background-color: aliceblue;
+        width: 80%;
+        height: 100vh;
+        transform: translateX(-100%);
+        transition: all 3s;
+        justify-content: space-evenly;
+        align-items: center;
+
+
+    }
+
+    .navbar .navbar-nav .active {
+        right: 0;
+    }
+
+    .navbar.navbar-nav a {
+        margin: 1.5rem;
+        display: flex;
+        padding: 0.5;
+        font-size: 2rem;
+    }
+
+
+
+}
+
+
+
+/*mobile phone*/
+@media (max-width: 450px) {
+    html {
+        font-size: 55%;
+    }
+}
+
+
+
+
+.baground {
+    width: 1366px;
+    height: 900px;
+    flex-shrink: 0;
+    background: url(image.png);
+    background-size: cover;
+    background-position: fixed;
+    display: flex;
+    left: 0px;
+    top: 0px;
+    background: url(image.png);
+    justify-content: space-between;
+}
+
+section {
+    padding: 2rem 9%;
+}
+
+.home {
+    display: flex;
+    align-items: center;
+
+}
+
+.home .content h1 {
+    position: absolute;
+    height: 124px;
+    left: 108px;
+    top: 280px;
+    font-family: "Inknut Antiqua";
+    font-size: 48px;
+    letter-spacing: 14.40px;
+    color: #1A1616;
+
+}
+
+
+.about h2 {
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 3px;
+    justify-content: center;
+
+}
+
+.cta {
+    display: flex;
+    width: 500px;
+    height: 130px;
+    left: 0;
+    right: 8rem;
+    top: 90px;
+    bottom: 6px;
+    border-radius: 0px 150px 150px 0px;
+    background: #FD9F9F;
+    color: #000;
+    font-size: 50px;
+    font-family: Inter;
+    font-weight: 900;
+    align-items: center;
+    padding: 4rem;
+    margin-top: 30px;
+    margin-left: -115px;
+
+}
+
+
+
+.shop .row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 3rem;
+    justify-content: center;
+    margin-left: 7rem;
+}
+
+.product-card {
+    text-align: left;
+
+}
+
+.product-card img {
+    width: 60%;
+    height: 60%;
+}
+
+.product-card-title {
+    margin: 0.5rem auto 0.5rem;
+    font-size: small;
+    justify-content: left;
+    font-family: 'Inria Sans', sans-serif;
+}
+
+.product-card p {
+    color: red;
+    font-size: large;
+}
+
+.product-card h2 {
+    color: rgb(7, 7, 7);
+    font-size: large;
+}
+
+.star {
+    color: rgb(7, 7, 7);
+    font-size: large;
+    margin-top: 3px;
+}
+
+.blog {
+    display: flex;
+}
+
+.blog .judul1 {
+    flex: 1;
+    text-align: center;
+    margin-top: 20rem;
+    justify-content: center;
+    margin-left: -4rem;
+
+}
+
+.judul2 {
+    flex: 1;
+    text-align: center;
+    margin-top: 60rem;
+    justify-content: center;
+    margin-left: -65rem;
+
+}
+
+.judul3 {
+    flex: 1;
+    text-align: center;
+    margin-top: 100rem;
+    justify-content: center;
+    margin-left: -60rem;
+
+}
+
+.judul h3 {
+    text-align: right;
+    margin-top: -70rem;
+    margin-right: 20rem;
+    position: fixed;
+
+
+
+}
+
+
+.blog-card img {
+    width: 400px;
+    height: 500px;
+    flex-shrink: 0;
+}
+
+
+.img2 {
+    width: 400px;
+    height: 500px;
+    flex-shrink: 0;
+    margin-top: -3px;
+}
+
+.img3 {
+    width: 400px;
+    height: 500px;
+    flex-shrink: 0;
+    margin-top: -px;
+}
+
+.about h2 span {
+    color: rgb(244, 146, 162);
+
+}
+
+
+.content {
+    text-align: center;
+    justify-content: center;
+}
+
+
+.content img {
+    justify-content: center;
+    position: static;
+    margin-left: 3rem;
+    width: 300px;
+    height: 300px;
+    margin-top: -3rem;
+
+}
+
+.link {
+    display: flex;
+    width: 1500px;
+    height: 150px;
+    margin-left: -3rem;
+    background: #FD9F9F;
+    color: #000;
+    font-size: large;
+    font-family: 'Inter';
+    justify-content: center;
+}
+
+.link h2 {
+    display: flex;
+    font-size: medium;
+    text-align: center;
+    margin-left: -15rem;
+    margin-top: 2rem;
+    justify-content: center;
+}
+
+.link-card {
+    display: flex;
+    font-size: small;
+    text-align: center;
+    justify-content: center;
+    margin-top: -6rem;
+    margin-right: 1rem;
+
+
+}
+
+.link-card h3 {
+    margin-left: 4px;
+    margin-right: 3rem;
+    font-family: 'Inria Sans', sans-serif;
+    margin-bottom: 8rem;
+    text-align: center;
+}
+
+.link-card h3:hover {
+    color: #473C33;
+}
+
+.link-card h3::after {
+    content: '';
+    display: block;
+    padding-bottom: 0.5rem;
+    border-bottom: 0.30rem solid #1A1616;
+    transform: scaleX(0);
+    transition: 0.2s linear;
+}
